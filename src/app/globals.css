@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-cormorant), "Times New Roman", serif;
+  --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
+  --color-ivory: #f3eee6;
+  --color-paper: #faf6f1;
+  --color-ink: #241c19;
+  --color-muted: #6d625c;
+  --color-plum: #4a2236;
+  --color-plum-deep: #2e1422;
+  --color-gold: #8d6b3e;
+  --color-line: #e3d8cc;
+  --color-blush: #f0ddd6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: var(--color-blush);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.8rem 1.35rem;
+  background: var(--color-plum);
+  color: var(--color-paper);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 160ms ease;
+}
+
+.btn:hover {
+  background: var(--color-plum-deep);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-ink);
+}
+
+.btn-ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  background: white;
+  padding: 0.75rem 0.85rem;
+  font: inherit;
+  color: inherit;
+}
+
+.field textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+}
